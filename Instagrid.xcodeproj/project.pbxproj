@@ -15,6 +15,7 @@
 		38CA6AED2922E0F800682ACE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38CA6AEB2922E0F800682ACE /* LaunchScreen.storyboard */; };
 		38CA6AFB29267F8C00682ACE /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38CA6AF929267F8C00682ACE /* ThirstySoftRegular.otf */; };
 		38CA6AFC29267F8C00682ACE /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38CA6AFA29267F8C00682ACE /* Delm-Medium.otf */; };
+		38CA6AFE29278F2800682ACE /* LayoutSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CA6AFD29278F2800682ACE /* LayoutSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		38CA6AEE2922E0F800682ACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38CA6AF929267F8C00682ACE /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		38CA6AFA29267F8C00682ACE /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
+		38CA6AFD29278F2800682ACE /* LayoutSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				38CA6AE62922E0F600682ACE /* Main.storyboard */,
+				38CA6AFD29278F2800682ACE /* LayoutSelectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -123,6 +126,7 @@
 				38CA6AD92922E0F600682ACE /* Sources */,
 				38CA6ADA2922E0F600682ACE /* Frameworks */,
 				38CA6ADB2922E0F600682ACE /* Resources */,
+				38CA6AFF292794D500682ACE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -181,6 +185,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		38CA6AFF292794D500682ACE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		38CA6AD92922E0F600682ACE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -189,6 +214,7 @@
 				38CA6AE52922E0F600682ACE /* ViewController.swift in Sources */,
 				38CA6AE12922E0F600682ACE /* AppDelegate.swift in Sources */,
 				38CA6AE32922E0F600682ACE /* SceneDelegate.swift in Sources */,
+				38CA6AFE29278F2800682ACE /* LayoutSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
