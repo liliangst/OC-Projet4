@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		383E8418292F78FE00D69B40 /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383E8417292F78FE00D69B40 /* ImageGridView.swift */; };
+		383E841A292FAAF000D69B40 /* ButtonPlusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383E8419292FAAF000D69B40 /* ButtonPlusView.swift */; };
 		38CA6AE12922E0F600682ACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CA6AE02922E0F600682ACE /* AppDelegate.swift */; };
 		38CA6AE32922E0F600682ACE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CA6AE22922E0F600682ACE /* SceneDelegate.swift */; };
 		38CA6AE52922E0F600682ACE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CA6AE42922E0F600682ACE /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		383E8417292F78FE00D69B40 /* ImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridView.swift; sourceTree = "<group>"; };
+		383E8419292FAAF000D69B40 /* ButtonPlusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPlusView.swift; sourceTree = "<group>"; };
 		38CA6ADD2922E0F600682ACE /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38CA6AE02922E0F600682ACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38CA6AE22922E0F600682ACE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 			children = (
 				38CA6AE62922E0F600682ACE /* Main.storyboard */,
 				38CA6AFD29278F2800682ACE /* LayoutSelectionView.swift */,
+				383E8417292F78FE00D69B40 /* ImageGridView.swift */,
+				383E8419292FAAF000D69B40 /* ButtonPlusView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,6 +217,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				383E841A292FAAF000D69B40 /* ButtonPlusView.swift in Sources */,
+				383E8418292F78FE00D69B40 /* ImageGridView.swift in Sources */,
 				38CA6AE52922E0F600682ACE /* ViewController.swift in Sources */,
 				38CA6AE12922E0F600682ACE /* AppDelegate.swift in Sources */,
 				38CA6AE32922E0F600682ACE /* SceneDelegate.swift in Sources */,
