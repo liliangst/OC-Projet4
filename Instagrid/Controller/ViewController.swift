@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        layoutSelector.currentLayout = .layout2
+        layoutSelector.configSelector()
         imageGrid.setLayout(layoutSelector.currentLayout)
     }
 
@@ -27,4 +27,24 @@ class ViewController: UIViewController {
         imageGrid.setLayout(layoutSelector.currentLayout)
     }
 
+    @IBAction func sharePicture(_ sender: UISwipeGestureRecognizer) {
+        guard let screenshot = takeScreenshot() else { return }
+        share(screenshot: screenshot)
+    }
+
+    private func takeScreenshot() -> UIImage? {
+        UIGraphicsBeginImageContext(imageGrid.bounds.size)
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        imageGrid.layer.render(in: context)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+
+    private func share(screenshot: UIImage) {
+        let activityViewController = UIActivityViewController(activityItems: [screenshot], applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        activityViewController.view.backgroundColor = #colorLiteral(red: 0.07140407711, green: 0.3981980085, blue: 0.5966526866, alpha: 1)
+        present(activityViewController, animated: true)
+    }
 }

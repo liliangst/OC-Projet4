@@ -11,7 +11,7 @@ class LayoutSelectionView: UIView {
 
     @IBOutlet private var buttons: [UIButton]!
 
-    @IBOutlet private var selector: UIImageView!
+    private var selector: UIImageView!
 
     enum Layout {
         case layout1, layout2, layout3
@@ -23,14 +23,20 @@ class LayoutSelectionView: UIView {
         }
     }
 
+    public func configSelector() {
+        selector = UIImageView(image: UIImage(named: "Selected"))
+        addSubview(selector)
+        currentLayout = .layout2
+    }
+
     private func updateSelector() {
         switch currentLayout {
         case .layout1:
-            selector.frame.origin = buttons[0].frame.origin
+            selector.frame = buttons[0].frame
         case .layout2:
-            selector.frame.origin = buttons[1].frame.origin
+            selector.frame = buttons[1].frame
         case .layout3:
-            selector.frame.origin = buttons[2].frame.origin
+            selector.frame = buttons[2].frame
         }
     }
 
