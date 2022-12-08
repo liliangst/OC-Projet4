@@ -23,24 +23,24 @@ class LayoutSelectionView: UIView {
         }
     }
 
-    public func configSelector() {
+    func configSelector() {
         selector = UIImageView(image: UIImage(named: "Selected"))
-        addSubview(selector)
+        selector.frame.size = buttons[0].frame.size
         currentLayout = .layout2
     }
 
-    private func updateSelector() {
+    func updateSelector() {
         switch currentLayout {
         case .layout1:
-            selector.frame = buttons[0].frame
+            buttons[0].addSubview(selector)
         case .layout2:
-            selector.frame = buttons[1].frame
+            buttons[1].addSubview(selector)
         case .layout3:
-            selector.frame = buttons[2].frame
+            buttons[2].addSubview(selector)
         }
     }
 
-    public func changeLayout(_ sender: UIButton) {
+    func changeLayout(_ sender: UIButton) {
 
         for (index, button) in buttons.enumerated() where button == sender {
             switch index {

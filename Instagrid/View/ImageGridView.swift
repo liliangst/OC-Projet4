@@ -14,6 +14,8 @@ class ImageGridView: UIView {
 
     private var buttons: [[ButtonPlusView]]!
 
+    var controller: ViewController!
+
     func setLayout(_ layout: LayoutSelectionView.Layout) {
         switch layout {
         case .layout1:
@@ -23,6 +25,7 @@ class ImageGridView: UIView {
         case .layout3:
             initLayout3()
         }
+        initListener()
     }
 
     private func clearView() {
@@ -77,4 +80,11 @@ class ImageGridView: UIView {
         configStacks()
     }
 
+    private func initListener() {
+        buttons.forEach { buttonRow in
+            buttonRow.forEach { button in
+                button.addTarget(controller, action: #selector(controller.pickImage(sender:)), for: .touchUpInside)
+            }
+        }
+    }
 }
