@@ -38,6 +38,7 @@ class LayoutSelectionView: UIView {
         case .layout3:
             buttons[2].addSubview(selector)
         }
+        selector.frame.size = buttons[0].frame.size
     }
 
     func changeLayout(_ sender: UIButton) {

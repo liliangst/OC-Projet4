@@ -34,6 +34,9 @@ class ViewController: UIViewController {
         } else {
             swipeGestureRecognizer.direction = .up
         }
+        coordinator.animate { _ in
+            self.layoutSelector.updateSelector()
+        }
     }
 
     @IBAction func changeImagesLayout(_ sender: UIButton) {
