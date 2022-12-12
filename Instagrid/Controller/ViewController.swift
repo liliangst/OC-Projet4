@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageGrid: ImageGridView!
 
     // Image picker
-    var currentButton: ButtonPlusView!
+    private var currentButton: ButtonPlusView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

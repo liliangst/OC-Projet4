@@ -62,24 +62,25 @@ class ImageGridView: UIView {
     }
 
     private func initLayout1() {
-        buttons = [[ButtonPlusView(style: .large)],
-                   [ButtonPlusView(style: .small), ButtonPlusView(style: .small)]]
+        buttons = [[ButtonPlusView()],
+                   [ButtonPlusView(), ButtonPlusView()]]
         configStacks()
     }
 
     private func initLayout2() {
-        buttons = [[ButtonPlusView(style: .small), ButtonPlusView(style: .small)],
-                   [ButtonPlusView(style: .large)]]
+        buttons = [[ButtonPlusView(), ButtonPlusView()],
+                   [ButtonPlusView()]]
         configStacks()
     }
 
     private func initLayout3() {
-        buttons = [[ButtonPlusView(style: .small), ButtonPlusView(style: .small)],
-                   [ButtonPlusView(style: .small), ButtonPlusView(style: .small)]]
+        buttons = [[ButtonPlusView(), ButtonPlusView()],
+                   [ButtonPlusView(), ButtonPlusView()]]
 
         configStacks()
     }
 
+    // Init listener to communicate with the controller
     private func initListener() {
         buttons.forEach { buttonRow in
             buttonRow.forEach { button in

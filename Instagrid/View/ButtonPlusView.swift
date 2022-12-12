@@ -9,25 +9,14 @@ import UIKit
 
 class ButtonPlusView: UIButton {
 
-    enum Style {
-        case small, large
-    }
-
-    public var style: Style = .small {
-        didSet {
-            setStyle(style)
-        }
-    }
-
-    private func setStyle(_ style: Style) {
-
+    private func setStyle() {
         setImage(UIImage(named: "Plus")!, for: .normal)
         backgroundColor = .white
     }
 
-    convenience init(style: Style) {
+    convenience init() {
         self.init(type: .custom)
-        setStyle(style)
+        setStyle()
     }
 
 }
